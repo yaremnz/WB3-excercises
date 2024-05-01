@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./date_difference.js"></script>
+    <style>
+        .row{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel Date:</h1>
+    <div class="row">
+        <input type="date" id="travelDateInputElement">
+        <button id="submitButtonElement">Submit</button>
+    </div>
+    <p id="outputParagraphElement">?</p>
+</body>
+<script>
+    submitButtonElement.onclick = handleClick;
+
+    function handleClick(){
+        const dt1 = new Date(travelDateInputElement.value)
+        const dt2 = new Date(); //NOW
+        const outputText = getDayDiffMessage(dt1, dt2);
+        outputParagraphElement.innerText = outputText;
+    }
+</script>
+</html>

@@ -16,3 +16,10 @@ function handleLoaded(e){
     displayButton.addEventListener("click", handleClick);
 }
 document.addEventListener("DOMContentLoaded", handleLoaded);
+
+//NON-FUNCTON BLOCK SCOPE EXAMPLE "IF" see also "For(){}"
+const e = 456;
+if(true){ //BEGIN BLOCK
+    const e = 123;
+} // END BLOCK
+console.log(e); //456
