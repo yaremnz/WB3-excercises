@@ -7,7 +7,7 @@ const MILLISECONDS_PER_DAY = HOURS_PER_DAY * MINUTES_IN_AN_HOUR * SECONDS_IN_A_M
 console.log(MILLISECONDS_PER_DAY)
 
 function datetimeDeltaInMilliseconds(dt1, dt2){
-    return Math.abs( dt1.getTime() - dt2.getTime());
+    return Math.abs(dt1.getTime() - dt2.getTime());
 }
 
 function milliscecondsIntoDays(ms){
